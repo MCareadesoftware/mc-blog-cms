@@ -43,47 +43,19 @@ export default buildConfig({
     cloudStorage({
       enabled: process.env.S3_ENABLED === "true",
       collections: {
-        empresaImagenDestacada: {
+        media: {
           adapter: s3Adapter(S3AdapterCredentials),
         },
-        empresaImagenPortada: {
+        mediaOpenGraph: {
           adapter: s3Adapter(S3AdapterCredentials),
         },
-        fotoBannerWhatsapp: {
+        sales: {
           adapter: s3Adapter(S3AdapterCredentials),
         },
-        fotoLogo: {
+        monthWinner: {
           adapter: s3Adapter(S3AdapterCredentials),
-        },
-        fotoLogoClienteEmpresas: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-
-        fotosCategorias: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-        fotosComentarios: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-        fotosEmpresas: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-
-        fotosProductos: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-        fotosServicios: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-        fotosUsuarios: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-        BannersHorizontal: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
-        BannersVertical: {
-          adapter: s3Adapter(S3AdapterCredentials),
-        },
+        }
+       
         
         
       },

@@ -35,8 +35,8 @@ const start = async () => {
   })
 
   // Add your own express routes here
-
-  app.listen(4000);
+  config.validateConfig();
+  app.listen(config.PORT);
 }
 
 start();
