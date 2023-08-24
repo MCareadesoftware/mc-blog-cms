@@ -54,7 +54,11 @@ export default buildConfig({
         },
         monthWinner: {
           adapter: s3Adapter(S3AdapterCredentials),
+        },
+        mainBanner: {
+          adapter: s3Adapter(S3AdapterCredentials),
         }
+       
        
         
         
@@ -66,6 +70,15 @@ export default buildConfig({
     user: Admins.slug,
   },
   collections: [MainBanner,Categories, Posts,UltimasNoticias, Tags, Admins, Media,MediaOpenGraph,FeaturedPosts,StickyPosts,Authors,LastNews,Users,Comments,WinnerMonth,Sale],
+  
+  csrf:[
+    "https://paginas-digitales-client-y5chm.ondigitalocean.app",
+    "https://starfish-app-t8o9t.ondigitalocean.app",
+    "https://starfish-app-t8o9t.ondigitalocean.app/admin",
+    "http://localhost:3000",
+    "http://localhost:4000/admin",
+  ],
+  
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
