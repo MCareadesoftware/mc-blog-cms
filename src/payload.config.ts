@@ -61,7 +61,7 @@ export default buildConfig({
       },
     }),
   ],
-  serverURL: `${config.SERVER_URL}`,
+  serverURL: config.SERVER_URL ,
   admin: {
     user: Admins.slug,
   },
