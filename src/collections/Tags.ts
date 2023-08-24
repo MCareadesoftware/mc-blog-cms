@@ -38,3 +38,4 @@ const Tags: CollectionConfig = {
 }
 
 export default Tags;
+// mongodb+srv://programadormonstruocreativo:XnvSJqIQogOQJbxx@cluster0.slaibop.mongodb.net/mc-academy-cms?retryWrites=true&w=majority
