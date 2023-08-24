@@ -19,21 +19,22 @@ import MainBanner from './collections/MainBanner';
 import UltimasNoticias from './collections/UltimasNoticias';
 import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
+import { config } from './config/configEnvs';
 
 
 
 const S3AdapterCredentials = {
   config: {
-    endpoint: process.env.S3_ENDPOINT,
+    endpoint: config.S3_ENDPOINT,
     credentials: {
-      accessKeyId: process.env.S3_ACCESSKEYID,
-      secretAccessKey: process.env.S3_SECRETACCESSKEY,
+      accessKeyId: config.S3_ACCESSKEYID,
+      secretAccessKey: config.S3_SECRETACCESSKEY,
     },
 
-    region: process.env.S3_REGION,
+    region: config.S3_REGION,
   },
 
-  bucket: process.env.S3_BUCKET,
+  bucket: config.S3_BUCKET,
 };
 export default buildConfig({
 
@@ -88,7 +89,7 @@ export default buildConfig({
       },
     }),
   ],
-  serverURL: `${process.env.CLIENT_URL}`,
+  serverURL: `${config.SERVER_URL}`,
   admin: {
     user: Admins.slug,
   },

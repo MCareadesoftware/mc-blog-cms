@@ -1,13 +1,14 @@
 import express from 'express';
 import payload from 'payload';
 import cors from "cors"
+import { config } from './config/configEnvs';
 
 require('dotenv').config();
 const app = express();
 
 app.use(
   cors({
-    origin: `${process.env.CLIENT_URL}`,
+    origin: `${config.CLIENT_URL}`,
     credentials: true,
     optionsSuccessStatus: 200,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
