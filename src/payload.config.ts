@@ -78,6 +78,9 @@ export default buildConfig({
     "https://starfish-app-t8o9t.ondigitalocean.app/admin",
     "http://localhost:3000",
     "http://localhost:4000/admin",
+    "https://admin.monstruocreativo.com",
+    "https://admin.monstruocreativo.com/admin",
+
   ],
   
   typescript: {
