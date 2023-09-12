@@ -21,6 +21,12 @@ const Authors: CollectionConfig = {
       label:"Puesto",
       type:"text",
       required:true
+    },
+    {
+      name:"description",
+      label:"Descripción",
+      type:"text",
+      required:true
     },  
     {
       name:"location",
@@ -33,6 +39,21 @@ const Authors: CollectionConfig = {
       label:"URL Linkedin",
       type:"text",
       required:true
+    },
+    {
+      name:"facebook",
+      label:"URL Facebook",
+      type:"text",
+    },
+    {
+      name:"twitter",
+      label:"URL Twitter",
+      type:"text",
+    },
+    {
+      name:"instagram",
+      label:"URL Instagram",
+      type:"text",
     },
     {
       name: "profile",

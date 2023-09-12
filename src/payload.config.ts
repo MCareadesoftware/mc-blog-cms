@@ -20,6 +20,7 @@ import UltimasNoticias from './collections/UltimasNoticias';
 import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 import { config } from './config/configEnvs';
+import Suscriptions from './collections/Suscriptions';
 
 
 
@@ -69,7 +70,7 @@ export default buildConfig({
   admin: {
     user: Admins.slug,
   },
-  collections: [MainBanner,Categories, Posts,UltimasNoticias, Tags, Admins, Media,MediaOpenGraph,FeaturedPosts,StickyPosts,Authors,LastNews,Users,Comments,WinnerMonth,Sale],
+  collections: [MainBanner,Suscriptions,Categories, Posts,UltimasNoticias, Tags, Admins, Media,MediaOpenGraph,FeaturedPosts,StickyPosts,Authors,LastNews,Users,Comments,WinnerMonth,Sale],
   
   csrf:[
     "https://paginas-digitales-client-y5chm.ondigitalocean.app",

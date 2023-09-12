@@ -34,6 +34,12 @@ const MainBanner: CollectionConfig = {
       type: "text",
       required: true,
     },
+    {
+      name:"link",
+      label:"Link de redirección",
+      type:"text",
+      required:true
+    }
   ],
   access: {
     read: () => true,

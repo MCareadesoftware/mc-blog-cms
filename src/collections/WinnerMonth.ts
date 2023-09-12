@@ -27,7 +27,14 @@ const WinnerMonth: CollectionConfig = {
       },
     ],
   },
-  fields: [],
+  fields: [
+    {
+      name: "link",
+      label: "Link de redireccionamiento",
+      type: "text",
+      required: true,
+    },
+  ],
   access: {
     read: () => true,
     create: () => true,
