@@ -25,28 +25,17 @@ const Votes: CollectionConfig = {
       name: "usuario",
       type: "relationship",
       relationTo: "users",
+      maxDepth:0,
+      unique:true
+
     },
     {
       name: "post",
       type: "relationship",
       relationTo: "posts",
       maxDepth:0
-    },
-
-    {
-      name:"liked",
-      type:"relationship",
-      relationTo:"users",
-      hasMany:true,
-      maxDepth:0
-    },
-    {
-      name:"disliked",
-      type:"relationship",
-      relationTo:"users",
-      hasMany:true,
-      maxDepth:0
     }
+ 
   ],
 };
 

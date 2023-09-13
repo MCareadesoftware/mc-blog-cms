@@ -21,6 +21,7 @@ import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 import { config } from './config/configEnvs';
 import Suscriptions from './collections/Suscriptions';
+import Votes from './collections/Votes';
 
 
 
@@ -70,7 +71,7 @@ export default buildConfig({
   admin: {
     user: Admins.slug,
   },
-  collections: [MainBanner,Suscriptions,Categories, Posts,UltimasNoticias, Tags, Admins, Media,MediaOpenGraph,FeaturedPosts,StickyPosts,Authors,LastNews,Users,Comments,WinnerMonth,Sale],
+  collections: [MainBanner,Suscriptions,Categories, Posts,UltimasNoticias, Tags, Admins, Media,MediaOpenGraph,FeaturedPosts,StickyPosts,Authors,LastNews,Users,Comments,WinnerMonth,Sale,Votes],
   
   csrf:[
     "https://paginas-digitales-client-y5chm.ondigitalocean.app",

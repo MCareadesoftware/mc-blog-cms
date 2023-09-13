@@ -42,12 +42,11 @@ const Users: CollectionConfig = {
       name: "rolUsuario",
       type: "text",
       defaultValue: "usuario",
-      // Save this field to JWT so we can use from `req.user`
       saveToJWT: true,
       access: {
-        // Only admins can create or update a value for this field
         create: () => true,
         update: ()=>true,
+        read:()=>true
       },
     },
   ],

@@ -42,7 +42,8 @@ const Comments: CollectionConfig = {
       relationTo:"users",
       hasMany:true,
       maxDepth:0
-    }
+    },
+
   ],
 };
 
