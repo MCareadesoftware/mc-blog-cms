@@ -18,8 +18,9 @@ const Votes: CollectionConfig = {
   },
   fields: [
   
+  
     {
-      name: "usuario",
+      name: "user",
       type: "relationship",
       relationTo: "users",
       maxDepth:0,
