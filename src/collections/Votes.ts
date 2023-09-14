@@ -17,16 +17,12 @@ const Votes: CollectionConfig = {
     read: () => true, // Everyone can see comments by default (can still restrict based on user role
   },
   fields: [
-    {
-      name: "texto",
-      type: "text",
-    },
+  
     {
       name: "usuario",
       type: "relationship",
       relationTo: "users",
       maxDepth:0,
-      unique:true
 
     },
     {
