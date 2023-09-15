@@ -2,7 +2,7 @@ import { CollectionConfig } from "payload/types";
 
 // Example Collection - For reference only, this must be added to payload.config.ts to be used.
 const Votes: CollectionConfig = {
-  slug: "votes",
+  slug: "votesBlog",
   labels:{
     singular:"Voto",
     plural:"Votos"
