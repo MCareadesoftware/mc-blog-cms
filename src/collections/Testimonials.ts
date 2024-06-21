@@ -26,13 +26,30 @@ const Testimonials: CollectionConfig = {
       hasMany: true,
     },
     {
-      name: "image",
-      type: "relationship",
-      label: "Imagen de testimonio",
-      relationTo: "testimonialMedia",
-      hasMany: false,
+      name: "youtubeLink",
+      label: "Link de Youtube",
+      type: "text",
       required: true,
     },
+    {
+      name: "company",
+      label: "Empresa",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "name",
+      label: "Nombre de persona",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "name",
+      label: "Puesto",
+      type: "text",
+      required: false,
+    },
+    
     {
       name: "description",
       label: "Descripción",
