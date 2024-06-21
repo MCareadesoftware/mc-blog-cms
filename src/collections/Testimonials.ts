@@ -44,7 +44,7 @@ const Testimonials: CollectionConfig = {
       required: true,
     },
     {
-      name: "name",
+      name: "job",
       label: "Puesto",
       type: "text",
       required: false,
