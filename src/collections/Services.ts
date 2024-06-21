@@ -22,8 +22,16 @@ const Services: CollectionConfig = {
       type: "select",
       options: [
         {
-          label: "Combos",
-          value: "combos",
+          label: "Combos desde cero",
+          value: "combos-cero",
+        },
+        {
+          label: "Combos vendedores",
+          value: "combos-vendedores",
+        },
+        {
+          label: "Combos marketeros",
+          value: "combos-marketeros",
         },
         {
           label: "Meta",
