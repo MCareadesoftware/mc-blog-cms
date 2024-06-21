@@ -1,14 +1,14 @@
 import { CollectionConfig } from "payload/types";
 
 // Example Collection - For reference only, this must be added to payload.config.ts to be used.
-const Projects: CollectionConfig = {
-  slug: "projects",
+const Testimonials: CollectionConfig = {
+  slug: "testimonials",
   labels: {
-    singular: "Proyecto",
-    plural: "Proyectos",
+    singular: "Testimonio",
+    plural: "Testimonios",
   },
   admin: {
-    useAsTitle: "company",
+    useAsTitle: "service",
   },
   access: {
     create: () => true,
@@ -19,30 +19,18 @@ const Projects: CollectionConfig = {
   fields: [
     {
       name: "service",
-      label: "Servicio",
+      label: "Servicio (Escoge uno o varios)",
       type: "relationship",
       relationTo: "services",
       required: true,
-      hasMany:true
+      hasMany: true,
     },
     {
       name: "image",
       type: "relationship",
-      label: "Imagen de portada",
-      relationTo: "projectMedia",
+      label: "Imagen de testimonio",
+      relationTo: "testimonialMedia",
       hasMany: false,
-      required: true,
-    },
-    {
-      name: "youtubeLink",
-      label: "Link de Youtube",
-      type: "text",
-      required: true,
-    },
-    {
-      name: "company",
-      label: "Empresa",
-      type: "text",
       required: true,
     },
     {
@@ -54,4 +42,4 @@ const Projects: CollectionConfig = {
   ],
 };
 
-export default Projects;
+export default Testimonials;

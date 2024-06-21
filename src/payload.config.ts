@@ -25,6 +25,8 @@ import Votes from "./collections/Votes";
 import ProjectMedia from "./collections/ProjectMedia";
 import Services from "./collections/Services";
 import Projects from "./collections/Projects";
+import Testimonials from "./collections/Testimonials";
+import TestimonialMedia from "./collections/TestimonialMedia";
 
 const S3AdapterCredentials = {
   config: {
@@ -63,6 +65,9 @@ export default buildConfig({
         projectMedia: {
           adapter: s3Adapter(S3AdapterCredentials),
         },
+        testimonialMedia: {
+          adapter: s3Adapter(S3AdapterCredentials),
+        },
       },
     }),
   ],
@@ -91,7 +96,9 @@ export default buildConfig({
     Votes,
     ProjectMedia,
     Services,
-    Projects
+    Projects,
+    Testimonials,
+    TestimonialMedia
   ],
 
   csrf: [

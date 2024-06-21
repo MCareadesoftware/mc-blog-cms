@@ -1,8 +1,8 @@
 import path from 'path';
 import type { CollectionConfig } from 'payload/types';
 
-const ProjectMedia: CollectionConfig = {
-  slug: 'projectMedia',
+const TestimonialMedia: CollectionConfig = {
+  slug: 'testimonialMedia',
   labels: {
     singular: "Imágen de servicio",
     plural: "Imagenes de servicios",
@@ -14,11 +14,10 @@ const ProjectMedia: CollectionConfig = {
     update:()=>true
   },
   upload: {
-    staticDir: path.resolve(__dirname, '../../project-media'),
+    staticDir: path.resolve(__dirname, '../../testimonial-media'),
     mimeTypes:["image/jpeg","image/png","image/gif","image/svg+xml","image/webp"]
-
   },
   fields: [],
 };
 
-export default ProjectMedia;
+export default TestimonialMedia;
