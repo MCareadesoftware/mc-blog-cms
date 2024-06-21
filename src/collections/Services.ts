@@ -90,6 +90,12 @@ const Services: CollectionConfig = {
       required:true,
       unique:true
     },
+    {
+      name:"youtubeLink",
+      type:"text",
+      label:"Video de presentacion Youtube",
+      required:true
+    }
     // {
     //   name: "post",
     //   type: "relationship",
