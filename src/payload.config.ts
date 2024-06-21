@@ -1,29 +1,30 @@
-import { buildConfig } from 'payload/config';
-import path from 'path';
-import Categories from './collections/Categories';
+import { buildConfig } from "payload/config";
+import path from "path";
+import Categories from "./collections/Categories";
 
-import Posts from './collections/Posts';
-import Tags from './collections/Tags';
-import Media from './collections/Media';
-import MediaOpenGraph from './collections/MediaOpenGraph';
-import FeaturedPosts from './collections/FeaturedPosts';
-import Admins from './collections/Admins';
-import Authors from './collections/Autores';
-import LastNews from './collections/LastNews';
-import StickyPosts from './collections/StickyPosts';
-import Users from './collections/Users';
-import Comments from './collections/Comments';
-import WinnerMonth from './collections/WinnerMonth';
-import Sale from './collections/Sale';
-import MainBanner from './collections/MainBanner';
-import UltimasNoticias from './collections/UltimasNoticias';
+import Posts from "./collections/Posts";
+import Tags from "./collections/Tags";
+import Media from "./collections/Media";
+import MediaOpenGraph from "./collections/MediaOpenGraph";
+import FeaturedPosts from "./collections/FeaturedPosts";
+import Admins from "./collections/Admins";
+import Authors from "./collections/Autores";
+import LastNews from "./collections/LastNews";
+import StickyPosts from "./collections/StickyPosts";
+import Users from "./collections/Users";
+import Comments from "./collections/Comments";
+import WinnerMonth from "./collections/WinnerMonth";
+import Sale from "./collections/Sale";
+import MainBanner from "./collections/MainBanner";
+import UltimasNoticias from "./collections/UltimasNoticias";
 import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
-import { config } from './config/configEnvs';
-import Suscriptions from './collections/Suscriptions';
-import Votes from './collections/Votes';
-
-
+import { config } from "./config/configEnvs";
+import Suscriptions from "./collections/Suscriptions";
+import Votes from "./collections/Votes";
+import ProjectMedia from "./collections/ProjectMedia";
+import Services from "./collections/Services";
+import Projects from "./collections/Projects";
 
 const S3AdapterCredentials = {
   config: {
@@ -39,7 +40,6 @@ const S3AdapterCredentials = {
   bucket: config.S3_BUCKET,
 };
 export default buildConfig({
-
   plugins: [
     // Pass the plugin to Payload
     cloudStorage({
@@ -59,21 +59,42 @@ export default buildConfig({
         },
         mainBanner: {
           adapter: s3Adapter(S3AdapterCredentials),
-        }
-       
-       
-        
-        
+        },
+        projectMedia: {
+          adapter: s3Adapter(S3AdapterCredentials),
+        },
       },
     }),
   ],
-  serverURL: config.SERVER_URL ,
+  serverURL: config.SERVER_URL,
   admin: {
     user: Admins.slug,
   },
-  collections: [MainBanner,Suscriptions,Categories, Posts,UltimasNoticias, Tags, Admins, Media,MediaOpenGraph,FeaturedPosts,StickyPosts,Authors,LastNews,Users,Comments,WinnerMonth,Sale,Votes],
-  
-  csrf:[
+  collections: [
+    MainBanner,
+    Suscriptions,
+    Categories,
+    Posts,
+    UltimasNoticias,
+    Tags,
+    Admins,
+    Media,
+    MediaOpenGraph,
+    FeaturedPosts,
+    StickyPosts,
+    Authors,
+    LastNews,
+    Users,
+    Comments,
+    WinnerMonth,
+    Sale,
+    Votes,
+    ProjectMedia,
+    Services,
+    Projects
+  ],
+
+  csrf: [
     "https://paginas-digitales-client-y5chm.ondigitalocean.app",
     "https://starfish-app-t8o9t.ondigitalocean.app",
     "https://starfish-app-t8o9t.ondigitalocean.app/admin",
@@ -81,13 +102,12 @@ export default buildConfig({
     "http://localhost:4000/admin",
     "https://admin.monstruocreativo.com",
     "https://admin.monstruocreativo.com/admin",
-
   ],
-  
+
   typescript: {
-    outputFile: path.resolve(__dirname, 'payload-types.ts'),
+    outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
   graphQL: {
-    schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
+    schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
-})
+});

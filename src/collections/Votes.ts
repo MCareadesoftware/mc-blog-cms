@@ -8,7 +8,7 @@ const Votes: CollectionConfig = {
     plural:"Votos"
   },
   admin: {
-    useAsTitle: "usuario",
+    useAsTitle: "user",
   },
   access: {
     create: ()=>true,
