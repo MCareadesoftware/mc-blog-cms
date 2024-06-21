@@ -8,7 +8,7 @@ const Projects: CollectionConfig = {
     plural: "Proyectos",
   },
   admin: {
-    useAsTitle: "company",
+    useAsTitle: "title",
   },
   access: {
     create: () => true,
@@ -36,6 +36,12 @@ const Projects: CollectionConfig = {
     {
       name: "youtubeLink",
       label: "Link de Youtube",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "title",
+      label: "Título",
       type: "text",
       required: true,
     },
