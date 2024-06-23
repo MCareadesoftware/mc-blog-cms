@@ -23,7 +23,7 @@ const Projects: CollectionConfig = {
       type: "relationship",
       relationTo: "services",
       required: true,
-      hasMany:true
+      hasMany: true,
     },
     {
       name: "image",
@@ -54,8 +54,44 @@ const Projects: CollectionConfig = {
     {
       name: "description",
       label: "Descripción",
-      type: "textarea",
+      type: "richText",
+      admin: {
+        elements: ["blockquote", "h1", "h2", "h3", "ol", "ul", "upload"],
+        leaves: ["bold", "italic", "underline"],
+        hideGutter: true,
+      },
       required: true,
+    },
+    {
+      name: "links",
+      labels: {
+        plural: "Links",
+        singular: "link",
+      },
+      type: "array",
+      fields: [
+        {
+          name: "name",
+          label: "Nombre",
+          type: "text",
+          required: true,
+        },
+        {
+          name: "link",
+          type: "text",
+          required: true,
+        },
+      ],
+      required: false,
+    },
+
+    {
+      name: "testimonials",
+      label: "Testimonios",
+      type: "relationship",
+      relationTo: "testimonials",
+      hasMany: true,
+      required: false,
     },
   ],
 };
