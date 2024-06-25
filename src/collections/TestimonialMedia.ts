@@ -4,8 +4,8 @@ import type { CollectionConfig } from 'payload/types';
 const TestimonialMedia: CollectionConfig = {
   slug: 'testimonialMedia',
   labels: {
-    singular: "Imágen de servicio",
-    plural: "Imagenes de servicios",
+    singular: "Imágen de testimonio",
+    plural: "Imagenes de testimonios",
   },
   access:{
     read:()=>true,

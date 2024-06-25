@@ -52,8 +52,14 @@ const Projects: CollectionConfig = {
       required: true,
     },
     {
-      name: "description",
-      label: "Descripción",
+      name:"description",
+      type:"textarea",
+      required:false
+
+    },
+    {
+      name: "descriptionhtml",
+      label: "Descripción Rich Text",
       type: "richText",
       admin: {
         elements: ["blockquote", "h1", "h2", "h3", "ol", "ul", "upload"],
