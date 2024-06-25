@@ -8,7 +8,7 @@ const Testimonials: CollectionConfig = {
     plural: "Testimonios",
   },
   admin: {
-    useAsTitle: "service",
+    useAsTitle: "company",
   },
   access: {
     create: () => true,
